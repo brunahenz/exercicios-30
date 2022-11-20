@@ -8,12 +8,41 @@
     ***Não apresente listas que não tiveram filme cadastrado.
     */
 
-    //ENTRADA
+     //ENTRADA
 
+     const filmesCadastro = parseInt(prompt("Informe quantos filmes deseja cadastrar:"));
 
     //PROCESSAMENTO
 
-    
+     let comedia = [];
+     let drama = [];
+     let romance = [];
+
+    for (let index = 1; index <= filmesCadastro; index++) {
+     const nomeFilme = prompt("Nome do filme:");
+     const generoFilme = prompt("Informe o genero (C-Comédia | D-Drama | R-Romance):").toUpperCase();
+     if (generoFilme === "C") {
+        comedia.push(nomeFilme)
+     } 
+     else if (generoFilme === "D") {
+        drama.push(nomeFilme)
+     }   
+     else {
+        romance.push(nomeFilme)
+     }    
+    }
+
     //SAÍDA
+
+     if (comedia.length >= 1) {
+    document.write(`Filmes de comedia: ${comedia.join(", ")}</br>`)
+    }
+     if (drama.length >= 1){
+    document.write(`Filmes de drama: ${drama.join(", ")}</br>`)
+    }
+     if (romance.length >= 1){
+    document.write(`Filmes de romance: ${romance.join(", ")}`)
+    }
+
     
 </script>

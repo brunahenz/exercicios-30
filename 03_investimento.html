@@ -9,10 +9,38 @@
 
     //ENTRADA
 
+    let valorInvestido = 0;
+    let valorInvestido24Meses = 0;
+    let valorInvestido48Meses = 0;
+    let valorInvestido96Meses = 0;
+    let rendimento24meses = 0;
+    let rendimento48meses = 0;
+    let rendimento96meses = 0;
 
     //PROCESSAMENTO
 
-    
+    for(meses = 1; meses <= 96; meses++){
+       valorInvestido = valorInvestido +100;
+       valorInvestido = valorInvestido * 1.018;
+       if (meses === 24) {
+          valorInvestido24Meses = valorInvestido;
+          rendimento24meses = valorInvestido - 2400;
+
+       }
+       else if (meses === 48) {
+        valorInvestido48Meses = valorInvestido; 
+        rendimento48meses = valorInvestido - 4800 - rendimento24meses; 
+
+       }
+      if (meses === 96){
+        valorInvestido96Meses = valorInvestido;
+        rendimento96meses = valorInvestido - 9600 - rendimento24meses - rendimento48meses;
+
+       }
+      
+    }
+
+
     //SAÍDA
     
 </script>

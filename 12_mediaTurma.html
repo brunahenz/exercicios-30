@@ -10,22 +10,20 @@
     //ENTRADA
 
     let notasProgramacaoI = [4, 3, 5, 10, 9, 2, 7, 10, 8, 7, 6, 1, 5, 2, 3];
-    let maiorMedia = [];
-    let menorMedia = [];
 
     //PROCESSAMENTO
-    for(media of notasProgramacaoI){
-        if (media => 6) {
-            maiorMedia.push(media)      
-        }
-        else{
-            menorMedia.push(media)
-        }
-    }
-    const mediaSala = (menorMedia + maiorMedia) / 2
+    let maiorMedia = notasProgramacaoI.sort((a,b) => b-a)[0];
+    let menorMedia = notasProgramacaoI.sort((a,b) => a-b)[0];
 
-    
+    let soma = 0;
+    for(let nota of notasProgramacaoI){
+        soma = soma + nota;
+    }
+
+    let mediaTurma = soma / notasProgramacaoI.length;
+
     //SAÍDA
-    
-    
+    document.write(`A maior média é de: ${maiorMedia}</br>`) 
+    document.write(`A menor média é de: ${menorMedia}</br>`) 
+    document.write(`A média das notas é de: ${mediaTurma.toFixed(2)}`)  
 </script>

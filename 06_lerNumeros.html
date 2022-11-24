@@ -8,12 +8,14 @@
     */
 
     //ENTRADA
+
     let listaDeNumeros = [4, 8, 12, 35, 78, 83, 5, 22, 49, 95];
     let listaMenor = [];
     let listaMaior = [];
     
 
     //PROCESSAMENTO
+
     for(let lista of listaDeNumeros){
         if(lista < 50){
             listaMenor.push(lista)
@@ -27,6 +29,7 @@
     
 
     //SAÍDA
+    
     document.write(`Lista menor que 50: ${listaMenor.join(", ")}</br> Lista maior que 50: ${listaMaior.join(", ")}</br> Percentual abaixo de 50: ${percentualMenor}</br> Percentual acima de 50: ${percentualMaior} `)
       
 </script>

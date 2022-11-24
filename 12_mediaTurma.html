@@ -12,6 +12,7 @@
     let notasProgramacaoI = [4, 3, 5, 10, 9, 2, 7, 10, 8, 7, 6, 1, 5, 2, 3];
 
     //PROCESSAMENTO
+
     let maiorMedia = notasProgramacaoI.sort((a,b) => b-a)[0];
     let menorMedia = notasProgramacaoI.sort((a,b) => a-b)[0];
 
@@ -23,6 +24,7 @@
     let mediaTurma = soma / notasProgramacaoI.length;
 
     //SAÍDA
+    
     document.write(`A maior média é de: ${maiorMedia}</br>`) 
     document.write(`A menor média é de: ${menorMedia}</br>`) 
     document.write(`A média das notas é de: ${mediaTurma.toFixed(2)}`)  

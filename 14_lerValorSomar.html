@@ -8,10 +8,21 @@
 
     //ENTRADA
 
+    const numero = parseInt(prompt("Informe um número inteiro e positivo:"));
 
     //PROCESSAMENTO
 
-    
+    let soma = 0;
+    let expressao = "1 +";
+    for (let contador = 1; contador <= numero; contador++) {
+        expressao = `${expressao} 1/ ${contador}`
+        soma = soma + (1 / contador);
+       
+    }
+
     //SAÍDA
+
+    document.write(`A soma é ${soma}<br/>`);
+    document.write(expressao.substring(0,expressao.length-1));
 
 </script>
